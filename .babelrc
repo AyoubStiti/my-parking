@@ -1,0 +1,34 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "sourceMaps": "inline",
+  "retainLines": true,
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "app": "./src/app",
+          "controllers": "./src/controllers",
+          "helpers": "./src/helpers",
+          "errors": "./src/errors",
+          "middlewares": "./src/middlewares",
+          "models": "./src/models",
+          "routes": "./src/routes",
+          "services": "./src/services",
+          "validators": "./src/validators",
+          "api": "./src/api",
+          "constants": "./src/constants"
+        }
+      }
+    ]
+  ]
+}

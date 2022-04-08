@@ -1,0 +1,91 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["prettier", "airbnb-base", "prettier/babel"],
+  "plugins": ["prettier", "prefer-arrow"],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "prefer-arrow/prefer-arrow-functions": [
+      "warn",
+      {
+        "disallowPrototype": true,
+        "singleReturnOnly": false,
+        "classPropertiesAllowed": false
+      }
+    ],
+    "no-underscore-dangle": "off",
+    "no-restricted-globals": "off",
+    "linebreak-style": "off",
+    "no-extra-parens": "error",
+    "no-return-await": "off",
+    "no-await-in-loop": "off",
+    "no-plusplus": "off",
+    "max-lines": ["error", 200],
+    "max-lines-per-function": ["error", 100],
+    "space-before-function-paren": "off",
+    "prefer-arrow-callback": ["error", { "allowNamedFunctions": false }],
+    "prefer-const": "error",
+    "prefer-destructuring": [
+      "error",
+      {
+        "VariableDeclarator": {
+          "array": false,
+          "object": true
+        },
+        "AssignmentExpression": {
+          "array": true,
+          "object": true
+        }
+      },
+      {
+        "enforceForRenamedProperties": false
+      }
+    ],
+    "no-console": "warn",
+    "no-const-assign": "error",
+    "no-var": "error",
+    "no-param-reassign": "off",
+    "arrow-parens": ["error", "as-needed"],
+    "sort-imports": "off",
+    "no-new-require": "error",
+    "max-len": ["error", { "code": 155 }],
+    "prefer-promise-reject-errors": ["off"],
+    "no-return-assign": ["off"],
+    "import/no-cycle": [0, { "maxDepth": 3 }],
+    "import/imports-first": 0,
+    "import/newline-after-import": "error",
+    "import/no-dynamic-require": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-named-as-default": 0,
+    "import/no-unresolved": 2,
+    "import/no-webpack-loader-syntax": 0,
+    "import/prefer-default-export": 0,
+    "no-unused-vars": "warn",
+    "no-use-before-define": 0,
+    "prefer-template": 2,
+    "require-yield": 0,
+    "arrow-spacing": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "alias": {
+          "App": "./src/app",
+          "Controllers": "./src/controllers",
+          "Helpers": "./src/helpers",
+          "Middlewares": "./src/middlewares",
+          "Models": "./src/models",
+          "routes": "./src/routes",
+          "Services": "./src/services",
+          "Validators": "./src/validators"
+        }
+      }
+    }
+  }
+}
